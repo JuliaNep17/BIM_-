@@ -1,0 +1,11 @@
+volume_of_diskette = 1.44  # Информационный объем дискеты
+pages_in_book = 100  # Количество страниц в книге
+rows_per_page = 50  # Число строк на странице
+characters_per_row = 25  # Количество символов в строке
+symbol_size_in_bytes = 4 # Для хранения кода одного символа нужно 4 байта
+
+size_of_book = (pages_in_book * rows_per_page * characters_per_row * symbol_size_in_bytes)/ 1024 ** 2
+books_on_diskette = int(volume_of_diskette / size_of_book)
+
+print("Количество книг, помещающихся на дискету:", books_on_diskette)
+
