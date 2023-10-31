@@ -1,0 +1,18 @@
+users = ['user1', 'user2', 'user3', 'user1', 'user4', 'user2']
+
+dict_ = {
+    "Общее количество": 0,
+    "Уникальные посещения": 0
+}
+
+count_of_visits = len(users)
+
+unique_numbers = set(users)
+count_of_unique_visits = len(unique_numbers)
+
+dict_["Общее количество"] = count_of_visits
+dict_["Уникальные посещения"] = count_of_unique_visits
+
+print(dict_)
+
+
