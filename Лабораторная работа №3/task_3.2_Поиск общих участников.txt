@@ -1,0 +1,21 @@
+# TODO Напишите функцию find_common_participants
+def find_common_participants(group1, group2, delimiter=','):
+    participants1 = group1.split(delimiter)
+    participants2 = group2.split(delimiter)
+
+    common_participants = sorted(list(set(participants1).intersection(participants2)))
+
+    return common_participants
+
+
+participants_first_group = "Иванов|Петров|Сидоров"
+participants_second_group = "Петров|Сидоров|Смирнов"
+
+
+# Проверка работы функции с разделителем отличным от запятой
+common_participants_comma = find_common_participants(participants_first_group, participants_second_group)
+print(common_participants_comma)
+
+# Проверка работы функции с разделителем "|"
+common_participants_pipe = find_common_participants(participants_first_group, participants_second_group, '|')
+print(common_participants_pipe)
